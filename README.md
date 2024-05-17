@@ -1,3 +1,6 @@
+Here's a sample `README.md` file for your repository:
+
+---
 
 # EFK Stack Deployment on Kubernetes
 
