@@ -90,10 +90,10 @@ docker build -t login-app:latest .
 4\. **Run the Docker container:**
 
 ```
-docker run -d -p 5000:5000 --name login-app-container login-app:latest
+docker run -p 5001:5001 --name login-app-container login-app:latest
 ```
 
-5\. **Open a browser and go to `http://localhost:5000` to see the login page.**
+5\. **Open a browser and go to `http://localhost:5001` to see the login page.**
 
 ## Application Usage
 
@@ -113,6 +113,17 @@ docker run -d -p 5000:5000 --name login-app-container login-app:latest
 
 - Ensure Docker is properly installed and running on your machine before building and running the Docker image.
 
+### Helper commands
+```
+List all containers (only IDs)
+docker ps -aq
+Stop all running containers
+docker stop $(docker ps -aq)
+Remove all containers
+docker rm $(docker ps -aq)
+Remove all images
+docker rmi $(docker images -q)
+```
 ---
 
 This should provide a comprehensive guide for setting up and running the login application both locally and using Docker. Let me know if you need any further adjustments!
