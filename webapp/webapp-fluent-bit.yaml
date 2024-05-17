@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-event-simulator
+  namespace: efk
+  labels:
+    name: app
+spec:
+  containers:
+  - name: app
+    image: kodekloud/event-simulatorhttps://github.com/learnwithraghu/efk-files/tree/main
+    volumeMounts:
+    - mountPath: /log
+      name: log-volume
+
+  # Volume to store the logs
+  volumes:
+  - name: log-volume
+    hostPath:
+      path: /var/log/webapp
+      type: DirectoryOrCreate
