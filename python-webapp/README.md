@@ -16,6 +16,8 @@ login-app/
 ├── templates/
 
 │   └── login.html
+    └── second_level_auth.html
+    └── welcome.html
 
 ├── static/
 
