@@ -95,6 +95,37 @@ docker run -p 5001:5001 --name login-app-container login-app:latest
 
 5\. **Open a browser and go to `http://localhost:5001` to see the login page.**
 
+6\. **Push image to Docker hub**
+   
+Check Image: Verify the correct image name using `docker image ls`.
+Tag Image: Assign the image a new name with your Docker Hub repository information:
+
+    ```
+    docker tag <your_image_name> <your_dockerhub_username>/<repository_name>:<tag>
+
+    ```
+
+Login: Authenticate with Docker Hub:
+
+    ```
+    docker login
+
+    ```
+
+    (Enter your Docker Hub credentials when prompted.)
+Push Image: Upload the tagged image to Docker Hub:
+
+    ```
+    docker push <your_dockerhub_username>/<repository_name>:<tag>
+
+    ```
+
+Verify: Check if the push was successful by visiting your Docker Hub repository. The image should be listed there.
+Troubleshooting: If you encounter errors:
+  -   Double-check credentials and repository permissions.
+  -   Ensure the image name and tag are correct.
+  -   Review the Docker documentation or seek further assistance if needed.
+
 ## Application Usage
 
 - Use the default credentials to log in:
