@@ -154,4 +154,3 @@ docker rmi $(docker images -q)
 ```
 ---
 
-This should provide a comprehensive guide for setting up and running the login application both locally and using Docker. Let me know if you need any further adjustments!
