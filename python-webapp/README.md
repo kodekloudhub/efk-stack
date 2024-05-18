@@ -1,6 +1,3 @@
-Certainly! Here is the content for your README file:
-
----
 
 # Login Application
 
