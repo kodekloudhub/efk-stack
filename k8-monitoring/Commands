@@ -1,0 +1,15 @@
+Set config
+kubectl config set-context --current --namespace=kube-system
+
+Deployment 
+kubectl apply -f .
+
+Validation 
+kubectl describe daemonset fluent-bit
+
+Delete resource 
+kubectl delete configmap fluent-bit
+kubectl delete daemonset fluent-bit
+kubectl delete serviceaccount fluent-bit
+kubectl delete clusterrole fluent-bit
+kubectl delete clusterrolebinding fluent-bit
