@@ -6,7 +6,7 @@ metadata:
   labels:
     app: simple-webapp
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: simple-webapp
@@ -19,7 +19,7 @@ spec:
       - name: simple-webapp
         image: learnwithraghu/simple-webapp-python:v1
         ports:
-        - containerPort: 5000
+        - containerPort: 5005
         volumeMounts:
         - mountPath: /log
           name: log-volume

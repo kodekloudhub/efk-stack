@@ -11,6 +11,6 @@ spec:
     app: simple-webapp
   ports:
   - protocol: TCP
-    port: 5000
-    targetPort: 5000
-    nodePort: 30007  # NodePort range is typically between 30000-32767
+    port: 5005
+    targetPort: 5005
+    nodePort: 32367  # NodePort range is typically between 30000-32767
