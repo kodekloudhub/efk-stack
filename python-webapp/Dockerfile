@@ -1,14 +1,10 @@
-FROM python:3.9-slim
+FROM python:3.8-slim-buster
 
 WORKDIR /app
-COPY . /app
 
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
-# Redirect Flask logs to a file
-ENV FLASK_ENV=production
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
-ENV FLASK_RUN_PORT=5001
+COPY . .
 
-CMD ["flask", "run"]
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=5005"]
